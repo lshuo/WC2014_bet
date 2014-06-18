@@ -47,14 +47,16 @@ print(len(money_table))
 max_money = 0.
 max_bet1 = ()
 max_bet2 = ()
+sum_money = 0.
 for bets in combinations(money_table, 2):
     if bets[0][0] == bets[1][0]:
         continue;
     money = money_table[bets[0]] * money_table[bets[1]]
+    sum_money += money
     if money > max_money:
         max_money = money
         max_bet1 = bets[0]
         max_bet2 = bets[1]
 
 print('best bet: ' + str(max_bet1) + ' ' + str(max_bet2))
-print('money earned if bet 1: ' + str(max_money))
+print('expected money earned if bet 1: ' + str(max_money))

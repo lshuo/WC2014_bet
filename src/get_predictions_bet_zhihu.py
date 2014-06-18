@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import cPickle
-import os.path, time
+from datetime import datetime
 
 pred_file_name = '../data/BSports Match Analysis.htm'
 file = open(pred_file_name, 'r')
@@ -20,7 +20,7 @@ print(p_home_win)
 print(p_tie)
 print(p_away_win)
 
-hh_now = int(time.ctime(os.path.getctime(pred_file_name)).split(' ')[3].split(':')[0])
+hh_now = datetime.now().time().hour
 hh_until = int(soup.body.findAll('div', attrs = {'id':'kickoff-countdown'})[0].text.split(':')[1])
 hh_kickoff = (hh_now + hh_until + 1) % 24
 

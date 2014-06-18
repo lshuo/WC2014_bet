@@ -8,5 +8,5 @@ function APC_r_err(i,st,t){var data=new Date();var tm=data.getTime()-st.getTime(
 APC_st(i+1,0);else
 {APC_Rpt(APC_r_url);}}
 function APC_Rpt(s){var p=new Image();p.src=s;}
-try{apc_CallBack({"rCount":0});}catch(e){}})();
+try{apc_CallBack({"rCount":2,'1027':'http://rescdn.qqmail.com/bz.gif','322':'http://dr.qlogo.cn/daren/650fab44fc3a5da799d72cb7cb66d0da1b9f7b26cfc43d057e6629cc06e5aab30c51fa3b57730d06/100'});}catch(e){}})();
 
